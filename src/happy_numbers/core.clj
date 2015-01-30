@@ -1,4 +1,4 @@
 (ns happy-numbers.core)
 
 (defn happy? [n]
-  true)
+  (= n 1))

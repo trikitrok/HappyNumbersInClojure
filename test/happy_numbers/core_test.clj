@@ -5,5 +5,6 @@
 (facts 
   "about happy numbers"
   (fact 
-    "one is happy"
-    (happy? 1) => true))
+    "of one digit"
+    (happy? 1) => true
+    (happy? 4) => false))
