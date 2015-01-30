@@ -4,10 +4,11 @@
   parse-int
   square
   digits-in
-  sum-squares-of)
+  sum-squares-of
+  one-digit?)
 
 (defn happy? [n]
-  (if (= 1 (count (digits-in n)))
+  (if (one-digit? n)
     (= (sum-squares-of (digits-in n)) 1)
     (= (sum-squares-of 
          (digits-in (sum-squares-of (digits-in n)))) 1)))
@@ -23,3 +24,6 @@
 
 (defn- sum-squares-of [digits]
   (reduce + (square digits)))
+
+(defn- one-digit? [n]
+  (= 1 (count (digits-in n))))
