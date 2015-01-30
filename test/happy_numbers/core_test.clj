@@ -7,5 +7,6 @@
   
     (happy? 1) => true
     (happy? 4) => false
+    (happy? 7) => true
     (happy? 10) => true
     (happy? 31) => true)
