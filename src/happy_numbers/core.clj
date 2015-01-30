@@ -10,8 +10,7 @@
 (defn happy? [n]
   (if (one-digit? n)
     (= (sum-squares-of (digits-in n)) 1)
-    (= (sum-squares-of 
-         (digits-in (sum-squares-of (digits-in n)))) 1)))
+    (happy? (sum-squares-of (digits-in n)))))
 
 (defn- parse-int [ch]
   (Integer/parseInt (str ch)))
