@@ -5,17 +5,16 @@
   square
   digits-in
   sum-squares-of
-  one-digit?
-  happy?)
-
-(defn happy-numbers-under [n]
-  (filter happy? (range 1 n)))
+  one-digit?)
 
 (defn happy? [n]
   (let [sum-squared-digits (sum-squares-of (digits-in n))]
     (if (one-digit? sum-squared-digits)
       (= sum-squared-digits 1)
-      (happy? sum-squared-digits))))
+      (recur sum-squared-digits))))
+
+(defn happy-numbers-under [n]
+  (filter happy? (range 1 n)))
 
 (defn- parse-int [ch]
   (Integer/parseInt (str ch)))
