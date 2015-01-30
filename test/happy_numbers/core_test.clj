@@ -4,7 +4,7 @@
 
 (facts 
   "about happy numbers"
-  (fact 
-    "of one digit"
+  
     (happy? 1) => true
-    (happy? 4) => false))
+    (happy? 4) => false
+    (happy? 10) => true)

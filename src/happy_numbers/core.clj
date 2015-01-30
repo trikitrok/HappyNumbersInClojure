@@ -1,4 +1,4 @@
 (ns happy-numbers.core)
 
 (defn happy? [n]
-  (= n 1))
+  (= (reduce + (map #(* % %)(map #(Integer/parseInt (str %)) (str n)))) 1))

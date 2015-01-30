@@ -1,0 +1,6 @@
+(str 10)
+(map #(Integer/parseInt) (str 10))
+(map #(Integer/parseInt %) (str 10))
+(map #(Integer/parseInt (str %)) (str 10))
+(map #(* % %)(map #(Integer/parseInt (str %)) (str 10)))
+(reduce + (map #(* % %)(map #(Integer/parseInt (str %)) (str 10))))
