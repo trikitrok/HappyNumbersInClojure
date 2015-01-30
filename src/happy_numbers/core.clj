@@ -5,7 +5,11 @@
   square
   digits-in
   sum-squares-of
-  one-digit?)
+  one-digit?
+  happy?)
+
+(defn happy-numbers-under [n]
+  (filter happy? (range 1 n)))
 
 (defn happy? [n]
   (let [sum-squared-digits (sum-squares-of (digits-in n))]
