@@ -3,10 +3,11 @@
 (declare 
   parse-int
   square
-  digits-in)
+  digits-in
+  sum-squares-of)
 
 (defn happy? [n]
-  (= (reduce + (square (digits-in n))) 1))
+  (= (sum-squares-of (digits-in n)) 1))
 
 (defn- parse-int [ch]
   (Integer/parseInt (str ch)))
@@ -16,3 +17,6 @@
 
 (defn- digits-in [n]
   (map parse-int (str n)))
+
+(defn- sum-squares-of [digits]
+  (reduce + (square digits)))
