@@ -13,5 +13,6 @@
     (happy? 31) => true)
   
   (facts
-    "about happy numbers under 100 (see http://mathworld.wolfram.com/HappyNumber.html)"
+    "about happy numbers under a given number (see http://mathworld.wolfram.com/HappyNumber.html)"
+    
     (happy-numbers-under 100) => '(1 7 10 13 19 23 28 31 32 44 49 68 70 79 82 86 91 94 97)))
